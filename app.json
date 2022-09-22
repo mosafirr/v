@@ -1,0 +1,24 @@
+{
+  "name": "PM BOT",
+  "description": "Personal Message Chatting Robot. Mabe By ~ (c)XnKiT",
+  "keywords": ["telegram", "pm", "chat", "bot", "open", "source"],
+  "website": "https://github.com/xnkit",
+  "repository": "https://github.com/Xnkitk/PM-bot",
+  "env": {
+        "APP_ID": {"description": "Get this value from https://my.telegram.org", "required": true},
+        "API_HASH": {"description": "Get this value from https://my.telegram.org" , "required": true},
+        "TG_BOT_TOKEN": {"description": "Get Bot Token From BotFather Bot","required": true},
+        "ADMIN": {"description": "Admin user ID for incoming queries","required": true},
+        "ENV": {"description": "Set this to ANYTHING","value": "ANYTHING"}
+  },
+  "buildpacks": [
+    {"url": "heroku/python"}
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "stack": "heroku-20"
+}
